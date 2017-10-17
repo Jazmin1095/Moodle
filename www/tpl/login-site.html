@@ -1,0 +1,17 @@
+<ion-view view-title="Connect to Moodle">
+  <ion-content>
+    <div class="list">
+      <br><br>
+      <img src="img/moodle-logo.png" class="center" />
+      <br><br><br>
+      <div class="item item-text-wrap">Por favor escriba la URL de su sitio Moodle</div>
+      <label class="item item-input item-stacked-label">
+        <input type="url" placeholder="Dirección del sitio" ng-model="url">
+      </label>
+      <br>
+      <div class="item">
+        <button ion-button class="button button-block" ng-click="connect(url)">¡Conectar!</button>
+      </div>
+    </div>
+  </ion-content>
+</ion-view>

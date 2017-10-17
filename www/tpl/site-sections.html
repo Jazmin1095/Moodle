@@ -1,0 +1,27 @@
+<ion-view view-title="Moodle in English">
+    <ion-content scroll="false" padding="false">
+        <div class="mm-split-pane">
+            <div class="mm-split-pane-menu">
+                <ion-scroll style="height: 100%;">
+                    <ion-list>
+                        <a class="item" href="{{getURL('all')}}">
+                           Todo
+                        </a>
+                        <a class="item" href="{{getURL('one')}}">
+                          Bienvenido
+                        </a>
+                        <a class="item" href="{{getURL('one')}}">
+                            Di tu opinión
+                        </a>
+                        <a class="item" href="{{getURL('one')}}">
+                            Recursos de aprendizaje
+                        </a>
+                    </ion-list>
+                </ion-scroll>
+            </div>
+            <div ui-view="tablet" class="mm-split-pane-content">
+            </div>
+        </div>
+    </ion-content>
+</ion-view>
+

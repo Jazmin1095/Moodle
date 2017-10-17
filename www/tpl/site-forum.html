@@ -1,0 +1,38 @@
+<ion-view view-title="Anuncios del curso">
+    <ion-content scroll="false" padding="false">
+        <div class="mm-split-pane">
+            <div class="mm-split-pane-menu">
+                <ion-content>
+                    <div class="card phone-only">
+                        <div class="item item-body">
+                            <p>Este foro contiene lista de anuncios de los particpantes registrados del moodle.</p>
+                            <p><span class="item-note">{{discussions.length}} discusiones</span></p>
+                        </div>
+                    </div>
+                    <div class="card" ng-repeat="discussion in discussions | orderBy:'lastReplyTime':true track by $index">
+                        <div class="item item-avatar">
+                            <img src="{{discussion.thumb}}" alt="">
+                            <h2>{{discussion.subject}}</h2>
+                            <div class="item-note">{{discussion.lastReplyTime | dateDayOrTime}}</div>
+                            <p>{{discussion.author}}</p>
+                        </div>
+                        <a class="item item-body" ng-href="{{getURL(discussion)}}">
+                            <span ng-bind-html="discussion.intro"></span>
+                            <p><span class="item-note">{{discussion.replies}} respuestas</span></p>
+                        </a>
+                    </div>
+                </ion-content>
+            </div>
+            <div ui-view="tablet" class="mm-split-pane-content">
+                <ion-content>
+                    <div class="card">
+                        <div class="item item-body">
+                            <p>Este foro contiene lista de anuncios de los particpantes registrados del moodle.</p>
+                            <p><span class="item-note">{{discussions.length}} discusiones</span></p>
+                        </div>
+                    </div>
+                </ion-content>
+            </div>
+        </div>
+    </ion-content>
+</ion-view>

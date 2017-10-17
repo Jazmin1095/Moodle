@@ -1,0 +1,31 @@
+<ion-view view-title="Mountain MoodleMoot">
+    <ion-content>
+        <ul class="list card">
+            <li class="item item-text-wrap">
+                {{event.start}} - {{event.end}}
+            </li>
+            <li class="item item-text-wrap">
+                {{event.name}}
+            </li>
+            <li class="item item-icon-left">
+                <i class="icon ion-chatboxes"></i>
+                Forum
+            </li>
+        </ul>
+        <div class="card">
+            <div class="item item-select">
+                Notifications
+                <select>
+                    <option>Disabled</option>
+                    <option>10 Minutes</option>
+                    <option>30 Minutes</option>
+                    <option>1 Hour</option>
+                    <option selected>2 Hours</option>
+                    <option>6 Hours</option>
+                    <option>12 Hours</option>
+                    <option>24 Hours</option>
+                </select>
+            </div>
+        </div>
+    </ion-content>
+</ion-view>

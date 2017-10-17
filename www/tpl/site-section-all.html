@@ -1,0 +1,68 @@
+<ion-view view-title="All">
+    <ion-content>
+        <div class="card">
+            <div class="item item-divider">
+                Welcome
+            </div>
+            <a class="item item-media item-text-wrap" ui-sref="site.forum">
+                <img src="img/mod/forum.png" alt="">
+                Foro De anuncios
+            </a>
+            <a class="item item-media item-text-wrap item-button-right" ui-sref="site.file">
+                <img src="img/files/pdf-32.png" alt="">
+               Curso Online
+                <button class="button button-icon" ng-click="goToFile($event)">
+                    <i class="icon ion-paperclip positive"></i>
+                </button>
+            </a>
+        </div>
+        <div class="card">
+            <div class="item item-divider">
+                Que tienes que decir
+            </div>
+            <a class="item item-text-wrap" ui-sref="site.label">
+               Algunos documentos interesantes
+            </a>
+            <a class="item item-media item-text-wrap" ui-sref="site.page">
+                <img src="img/mod/page.png" alt="">
+                Cómo elaborar stouts
+            </a>
+            <a class="item item-media item-text-wrap item-button-right" ui-sref="site.page">
+                <img src="img/mod/page.png" alt="">
+                Utilzia Moodle para niños
+                <button class="button button-icon" ng-show="loadingicon2" ng-click="cancel2($event)">
+                    <i class="icon ion-loading-d positive"></i>
+                </button>
+                <button class="button button-icon" ng-show="refreshicon2" ng-click="refresh2($event)">
+                    <i class="icon ion-ios7-refresh-empty positive"></i>
+                </button>
+            </a>
+            <a class="item item-media item-text-wrap item-button-right" ui-sref="site.page">
+                <img src="img/mod/page.png" alt="">
+                Ver la cumbre del Mont Blanc
+                <button class="button button-icon" ng-show="downloadicon" ng-click="download($event)">
+                    <i class="icon ion-ios7-cloud-download-outline positive"></i>
+                </button>
+                <button class="button button-icon" ng-show="loadingicon" ng-click="cancel($event)">
+                    <i class="icon ion-loading-d positive"></i>
+                </button>
+            </a>
+            <a class="item item-media item-text-wrap item-button-right" ui-sref="site.choice">
+                <img src="img/mod/choice.png" alt="">
+                Vota por la subida.
+                <button class="button button-icon" ng-click="go($event)">
+                    <i class="icon ion-ios7-browsers-outline positive"></i>
+                </button>
+            </a>
+        </div>
+        <div class="card">
+            <div class="item item-divider">
+                Aprende Recursos
+            </div>
+            <a class="item item-media item-text-wrap" ui-sref="site.folder">
+                <img src="img/mod/folder.png" alt="">
+                Recurso de cursos
+            </a>
+        </div>
+    </ion-content>
+</ion-view>

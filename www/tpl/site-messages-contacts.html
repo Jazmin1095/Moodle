@@ -1,0 +1,11 @@
+<ion-view view-title="Contacts">
+    <ion-content class="has-tabs">
+        <ion-list>
+            <ion-item class="item-avatar" ng-repeat="contact in contacts | orderBy:'name' track by $index" ui-sref="site.messages-contact({index: contact.index})">
+                <img ng-src="{{contact.thumb}}" alt="">
+                <h2>{{contact.name}}</h2>
+            </ion-item>
+        </ion-list>
+    </ion-content>
+    <ng-include src="'tpl/site-messages-tabs.html'" ng-init="tab='contacts'"></ng-include>
+</ion-view>

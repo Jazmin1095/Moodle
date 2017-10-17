@@ -1,0 +1,16 @@
+<ion-view view-title="{{title}}">
+    <ion-content>
+        <div class="list">
+            <div ng-repeat="file in files">
+                <a ui-sref="site.files-site({path: $index})" class="item item-media" ng-if="file.children">
+                    <img src="img/mod/folder.png" alt="">
+                    {{file.name}}
+                </a>
+                <a class="item item-media" ng-if="!file.children">
+                    <img ng-src="img/files/{{file.icon}}" alt="">
+                    {{file.name}}
+                </a>
+            </div>
+        </div>
+    </ion-content>
+</ion-view>
